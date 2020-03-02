@@ -1,37 +1,49 @@
-//Ejercicio 3: escribe un programa que declare dos objetos: { x: 1, y: 2, z: 3 } y { a: 1, y: 2, z: 1 }. A continuación, comprueba qué nombres de propiedades son coincidentes y cuáles son también coincidentes en valor. //
+//Ejercicio proyecto: escribe un programa que declare 3 objetos de cada modelo de datos considerado: gestor, cliente, mensaje y transferencia. Los valores de las propiedades de los objetos pueden ser arbitrarios.//
 
 
-const objeto1 = {
-  x: 1, 
-  y: 2,
-  z: 3
+//objetos gestores
+const gestor1 = {
+  id: 1,
+  usuario: `gestor1`,
+  password: `gestor1`,
+  correo: `gestor1@mail.com`
 };
-const objeto2 = {
-  a: 1,
-  y: 2,
-  z: 1
+const gestor2 = {
+  id: 2,
+  usuario: `gestor2`,
+  password: `gestor2`,
+  correo: `gestor2@mail.com`
+};
+const gestor3 = {
+  id: 3,
+  usuario: `gestor3`,
+  password: `gestor3`,
+  correo: `gestor3@mail.com`
 };
 
-for (const key1 in objeto1)  {
-  console.log(`objeto1 posee la propiedad ${key1}`);
+//objetos clientes
 
-  for(const key2 in objeto2)  {
-    console.log(`objecto2 posee la propiedad ${key2}`);
-  
-  
-    //la propiedad existe en los dos objetos
-    if (key1 === key2){
-      console.log(`la propiedad ${key1} existe en los dos objetos`);
-      
-
-      //la propiedad existe en los dos objetos y tiene el mismo valor
-      // const value1 = objeto1[key1];
-      // const value2 = objeto2[key2];
-      if (objeto1[key1] === objeto2[key2])  {
-        console.log(`la propiedad ${key1} tiene el mismo valor para los dos objetos: ${objeto1[key1]}`);
-        
-      }
-    }
-  
-  }
-}
+const cliente1 =  {
+  id: 1,
+  id_gestor: 2,
+  usuario: `cliente1`,
+  password: `cliente1`,
+  correo: `cliente1@mail.com`,
+  saldo: 3000
+};
+const cliente2 =  {
+  id: 2,
+  id_gestor: 1,
+  usuario: `cliente2`,
+  password: `cliente2`,
+  correo: `cliente2@mail.com`,
+  saldo: 5000
+};
+const cliente3 =  {
+  id: 3,
+  id_gestor: 2,
+  usuario: `cliente3`,
+  password: `cliente3`,
+  correo: `cliente3@mail.com`,
+  saldo: 1000
+};
