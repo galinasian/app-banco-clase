@@ -47,3 +47,56 @@ const cliente3 =  {
   correo: `cliente3@mail.com`,
   saldo: 1000
 };
+//Ejercicio proyecto: escribe un programa que almacene los objetos creados en el ejercio anterior del proyecto dentro de un array (un array por cada modelo de datos). A continuación, recorre cada uno de los arrays y muestra todas propiedades.//
+
+
+//agrego loo gestores al array de gestores//
+const gestores = [];
+gestores.push(gestor1, gestor2, gestor3);
+// console.log(gestores);
+
+//agrego los clientes al array de clientes, otra manera de hacerlo//
+const clientes = [ cliente1, cliente2, cliente3 ];
+// console.log(clientes);
+
+//Esta funcion recibe como parámetro el id de un gestor y devuelve su nombre de usuario//
+const obtenerGestorUsuario = (id_gestor) => {
+
+  for(const gestor of gestores) {
+    if (gestor.id === id_gestor)  {
+      return gestor.usuario;
+    }
+  }
+  return `desconocido`;
+};
+
+
+console.log(`Gestores`);
+
+for(const gestor of gestores){
+console.log(`Id: ${gestor.id}`);
+console.log(`Usuario: ${gestor.usuario}`);
+console.log(`Correo: ${gestor.correo}`);
+console.log(`Password: ${gestor.password}`);
+console.log(`-------`);
+
+}
+
+console.log(`Clientes`);
+
+for(const cliente of clientes){
+
+  const usuarioGestor = obtenerGestorUsuario(cliente.id_gestor);
+
+  console.log(`Id: ${cliente.id}`);
+  console.log(`Id gestor: ${cliente.id_gestor}`);
+  console.log(`Usuario gestor: ${usuarioGestor}`);
+  console.log(`Usuario: ${cliente.usuario}`);
+  console.log(`password: ${cliente.password}`);
+  console.log(`Correo: ${cliente.correo}`);
+  console.log(`Saldo: ${cliente.saldo}`);
+  
+  
+}
+
+
